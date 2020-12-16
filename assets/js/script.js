@@ -10,6 +10,10 @@ let app = new Vue({
       icon: "fas fa-minus-circle",
   },
 
+
+
+
+
   methods: {
 
     removeTask : function () {
@@ -18,7 +22,13 @@ let app = new Vue({
 
     addTask : function (){
 
-        (this.initValue.length > 3) ? this.tasks.push(this.initValue): ''
+        (this.initValue.length > 3) ? this.tasks.push(this.initValue): '';
+        this.initValue = "";
     },
   },
+
+  mounted: function (){
+      this.initValue = "";
+  }
+
 });
