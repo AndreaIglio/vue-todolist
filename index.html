@@ -59,8 +59,8 @@
         alt="">
       
         <div class="input">
-          <input type="text" value="" placeholder="Inserisci la tua task">
-          <button @click="">Add</button>
+          <input type="text" placeholder="Inserisci la tua task" v-model="initValue">
+          <button @click="addTask">Add</button>
         </div>
         <h4>Todo List</h4>
         <div class="list">
