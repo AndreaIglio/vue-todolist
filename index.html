@@ -58,7 +58,8 @@
         alt="">
       
         <div class="input">
-          <input type="text" placeholder="Inserisci la tua task" v-model="initValue">
+          <input type="text" placeholder="Inserisci la tua task" v-model="initValue"
+          v-on:keydown.enter="addTask">
           <button @click="addTask">Add</button>
         </div>
         <h4>Todo List</h4>
