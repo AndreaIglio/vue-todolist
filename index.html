@@ -60,12 +60,12 @@
       
         <div class="input">
           <input type="text" value="" placeholder="Inserisci la tua task">
-          <button>Add</button>
+          <button @click="">Add</button>
         </div>
         <h4>Todo List</h4>
         <div class="list">
           <ul>  
-            <li v-for='items in tasks'> {{items}} <i v-bind:class="icon"></i></li>
+            <li v-for='items in tasks'> {{items}} <i v-bind:class="icon" @click="removeTask"></i></li>
             
           </ul>
         </div>

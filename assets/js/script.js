@@ -9,5 +9,11 @@ let app = new Vue({
     icon: "fas fa-minus-circle",
   },
 
-  methods: {},
+  methods: {
+
+    removeTask : function () {
+        this.tasks.pop();
+      }
+
+  },
 });
