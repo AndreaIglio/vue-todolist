@@ -52,18 +52,15 @@
 
   <!-- main -->
   <main class="flex">
-    <div class="container flex column" id='compiti'>
-      <img class="logo"
-        src="./assets/img/main/logo/logo.png"
-        alt="">
-      
+    <div class="container flex column" id='root'>
+      <img class="logo" src="./assets/img/main/logo/logo.png" alt="">
         <div class="input">
           <input type="text" placeholder="Inserisci la tua task" v-model="initValue"
           v-on:keydown.enter="addTask">
           <button @click="addTask">Add</button>
         </div>
         <h4>Todo List</h4>
-        <div class="list">
+        <div class="list flex">
           <ul>  
             <li v-for='(item,index) in tasks'> {{item}} <i v-bind:class="icon" @click="removeTask(index)"></i></li>
             <p v-if="tasks.length == 0">Non ci sono tasks to do</p>

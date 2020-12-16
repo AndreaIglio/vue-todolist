@@ -4,6 +4,8 @@
   box-sizing:border-box;
 }
 
+body {background-color: aquamarine;}
+
 /* utility */
 
 .flex {
@@ -36,22 +38,40 @@ main {
   align-items: center;
 }
 
-.logo {
-  height: 35%;
+img.logo {
+  height: 100px;
 }
 
 .container {
   min-width: 30%;
+  max-width: 90%;
   min-height: 30%;
   background-color: aliceblue;
   align-items: center;
   justify-content: space-around;
 
 }
+
+input {
+  margin-top: 15px;
+}
+
 div.list{
   height: 100%;
 }
 
+div.list > ul {
+  margin-bottom: 0px;
+}
+
+div.list > ul > li {
+  padding: 10px 0;
+}
+
+div.list i:hover {
+  cursor: pointer;
+  color: red;
+}
 /* /main */
 
 

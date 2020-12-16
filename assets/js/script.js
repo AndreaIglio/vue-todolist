@@ -2,7 +2,7 @@
 
 
 let app = new Vue({
-  el: "#compiti",
+  el: "#root",
   data: {
     initValue: "",
     tasks: ["Compra pane", "Mangia patate", "Vendi ortaggi"],
