@@ -17,7 +17,8 @@ let app = new Vue({
       },
 
     addTask : function (){
-        this.tasks.push(this.initValue);
+
+        (this.initValue.length > 3) ? this.tasks.push(this.initValue): ''
     },
   },
 });

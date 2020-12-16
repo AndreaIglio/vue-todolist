@@ -66,7 +66,7 @@
         <div class="list">
           <ul>  
             <li v-for='items in tasks'> {{items}} <i v-bind:class="icon" @click="removeTask"></i></li>
-            
+            <p v-if="tasks.length == 0">Non ci sono tasks to do</p>
           </ul>
         </div>
 
