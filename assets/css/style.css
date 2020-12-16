@@ -41,12 +41,15 @@ main {
 }
 
 .container {
-  width: 30%;
-  height: 50%;
+  min-width: 30%;
+  min-height: 30%;
   background-color: aliceblue;
   align-items: center;
   justify-content: space-around;
 
+}
+div.list{
+  height: 100%;
 }
 
 /* /main */

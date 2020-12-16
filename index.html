@@ -52,7 +52,6 @@
 
   <!-- main -->
   <main class="flex">
-
     <div class="container flex column" id='compiti'>
       <img class="logo"
         src="./assets/img/main/logo/logo.png"
@@ -65,7 +64,7 @@
         <h4>Todo List</h4>
         <div class="list">
           <ul>  
-            <li v-for='items in tasks'> {{items}} <i v-bind:class="icon" @click="removeTask"></i></li>
+            <li v-for='(item,index) in tasks'> {{item}} <i v-bind:class="icon" @click="removeTask(index)"></i></li>
             <p v-if="tasks.length == 0">Non ci sono tasks to do</p>
           </ul>
         </div>
