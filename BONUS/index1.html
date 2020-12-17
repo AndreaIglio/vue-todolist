@@ -63,7 +63,7 @@
         <div class="list flex column">
           <h4>Todo List</h4>
           <ul>  
-            <li v-for='(item,index) in tasks'> {{item}} <i v-bind:class="iconCancel" @click="moveToBin(index,item)"></i><i v-bind:class="iconEdit" @click=""></i> <i v-bind:class="iconDone" @click="completedTask(item,index)"></i></li>
+            <li v-for='(item,index) in tasks'> {{item}} <i v-bind:class="iconCancel" @click="moveToBin(index,item)"></i><i v-bind:class="iconEdit" @click="editTask(index)"></i> <i v-bind:class="iconDone" @click="completedTask(item,index)"></i></li>
            
           </ul>
         </div>
@@ -76,7 +76,7 @@
         <div class="bin flex column">
           <h4>Recycle Bin <i v-bind:class="iconBin" @click="removeAll"></i></h4>
           <ul>
-            <li v-for="(trash,index) in recycleBin"> {{trash}}</li>
+            <li v-for="(trash,index) in recycleBin"> {{trash}} </li>
           </ul>
         </div>
     

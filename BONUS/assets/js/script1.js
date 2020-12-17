@@ -29,7 +29,13 @@ let app = new Vue({
 
     // L'utente vuole poter modificare una task giá inserita
 
-    editTask: function () {},
+    editTask: function (index) {
+
+        let userTask = prompt("Change your task here");
+        this.tasks.splice(index,1);
+        this.tasks.push(userTask);
+
+    },
 
     // ma vuole anche poter indicare che la task é stata completata
     // inoltre se una task é stata completa allora vuole che venga inserita in un'altra colonna tipo "tasks completate"

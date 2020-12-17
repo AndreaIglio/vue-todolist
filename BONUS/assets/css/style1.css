@@ -93,6 +93,13 @@ i {
   margin: 0 10px;
 }
 
+.fa-check:hover {
+  color:lightgreen;
+}
+
+.fa-pen:hover {
+  color:grey;
+}
 
 /* /main */
 
