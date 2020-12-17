@@ -18,9 +18,10 @@ let app = new Vue({
       this.initValue.length > 3
         ? this.tasks.push(this.initValue)
         : alert("The task need to have at least 4 characters");
-      this.initValue = "";
+        this.initValue = "";
     },
   },
 
-  //chiedi come poter resettare il valore di initValue usando un "Hook"
+
+
 });

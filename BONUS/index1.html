@@ -12,7 +12,7 @@
 
 
   <!-- css -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style1.css">
   <!-- /css -->
 
 
@@ -59,14 +59,29 @@
           v-on:keydown.enter="addTask">
           <button @click="addTask">Add</button>
         </div>
-        <h4>Todo List</h4>
-        <div class="list flex">
+        <div class="tasks_list flex">
+        <div class="list flex column">
+          <h4>Todo List</h4>
           <ul>  
-            <li v-for='(item,index) in tasks'> {{item}} <i v-bind:class="icon" @click="removeTask(index)"></i></li>
-            <p v-if="tasks.length == 0">You don't have any tasks to do, go to play CyberPunk pls!</p>
+            <li v-for='(item,index) in tasks'> {{item}} <i v-bind:class="iconCancel" @click="moveToBin(index,item)"></i><i v-bind:class="iconEdit" @click=""></i> <i v-bind:class="iconDone" @click="completedTask(item,index)"></i></li>
+           
           </ul>
         </div>
-
+        <div class="completed_task flex column">
+          <h4>Completed tasks</h4>
+          <ul>
+            <li v-for="(element,index) in completedTasks"> {{element}} <i v-bind:class="iconCancel" @click="deleteTask(index,completedTasks)"></i></li>
+          </ul>
+        </div>
+        <div class="bin flex column">
+          <h4>Recycle Bin <i v-bind:class="iconBin" @click="removeAll"></i></h4>
+          <ul>
+            <li v-for="(trash,index) in recycleBin"> {{trash}}</li>
+          </ul>
+        </div>
+    
+        </div>
+     <p v-if="tasks.length == 0">You don't have any tasks to do, go to play CyberPunk pls!</p>
     </div>
 
   </main>
@@ -84,7 +99,7 @@
     <!-- /Vue Js -->
 
     <!-- JS script -->
-    <script type="text/javascript" src="assets/js/script.js">
+    <script type="text/javascript" src="assets/js/script1.js">
     </script>
     <!-- /JS script -->
 
