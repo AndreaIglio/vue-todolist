@@ -54,11 +54,14 @@
   <main class="flex">
     <div class="container flex column" id='root'>
       <img class="logo" src="./assets/img/main/logo/logo.png" alt="">
-        <div class="input">
+        <div class="input column flex">
+
           <input type="text" placeholder="Inserisci la tua task" v-model="initValue"
           v-on:keydown.enter="addTask">
-          <button @click="addTask">Add</button>
-        </div>
+          <span v-if="initValue.length < 4 && initValue">The task need to have at least 4 characters</span>
+         
+          
+        <button @click="addTask">Add</button>
         <div class="tasks_list flex">
         <div class="list flex column">
           <h4>Todo List</h4>

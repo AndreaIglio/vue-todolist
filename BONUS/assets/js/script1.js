@@ -23,7 +23,7 @@ let app = new Vue({
     addTask: function () {
       this.initValue.length > 3
         ? this.tasks.push(this.initValue)
-        : alert("The task need to have at least 4 characters");
+        : '';
       this.initValue = "";
     },
 
@@ -32,8 +32,7 @@ let app = new Vue({
     editTask: function (index) {
 
         let userTask = prompt("Change your task here");
-        this.tasks.splice(index,1);
-        this.tasks.push(userTask);
+        this.tasks.splice(index,1,userTask);
 
     },
 
